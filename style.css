@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Sen:wght@400;700;800&display=swap');
+:root {
+  --logo: 'Sen', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+li {
+  list-style: none;
+}
+.navbar {
+  width: 100%;
+  height: 50px;
+  background: black;
+}
+.navbar-container {
+  font-family: 'Sen', sans-serif;
+display: flex;
+align-items: center;
+padding: 0 50px;
+height: 100%;
+color: white;
+}
+.logo-container {
+  flex: 1;
+}
+.logo {
+  font-family: 'Sen', sans-serif;
+  font-size: 30px;
+  color: #4dbf00;
+}
+.menu-container {
+  flex: 6;
+  
+}
+.menu-list {
+  display: flex;
+}
+.manu-list-item {
+  margin-right: 30px;
+}
+.profile-container {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.profile-text-container {
+  margin: 0 20px;
+}
+.manu-list-item.active {
+  font-weight: bold;
+}
+.profile-picture {
+width: 32px;
+height: 32px;
+border-radius: 50%;
+object-fit: cover;
+}
+
+
+.sidebar {
+  width: 50px;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  display: flex;
+  flex-direction:column;
+  top: 0;
+  padding-top: 60px;
+  align-items: center;
+ 
+}
+.left-menu-icon {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.toggle {
+  width: 40px;
+  height: 20px;
+  background: white;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.toggle-icon {
+  color: gold;
+}
+.toggle-ball {
+  width: 18px;
+  height: 18px;
+  background: black;
+  position: absolute;
+  right: 51px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 1s ease all;
+}
+.container {
+  min-height: calc(100vh - 50px);
+  background: #151515;
+  color: white;
+}
+.content-container {
+  margin-left: 50px;
+
+}
+.featured-content {
+  height: 50vh;
+  background: tomato;
+  padding: 50px;
+}
+.featured-title {
+  width: 200px;
+}
+.featured-desc {
+  width: 500px;
+  color: lightgray;
+  margin: 30px 0 ;
+}
+.featured-button {
+  background: #4dbf00;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+cursor: pointer;
+}
+.movie-list-container {
+  padding:0 20px;
+}
+.movie-list-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.movie-list {
+  display: flex;
+  height: 300px;
+  align-items: center;
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+}
+.movie-list-item {
+  margin-right: 30px;
+  position: relative;
+}
+.movie-list-item:hover .movie-list-item-img {
+  transform: scale(1.2);
+  margin: 0 30px;
+  opacity: 0.5;
+}
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button
+ {
+opacity: 1;
+}
+.movie-list-item-img {
+  width: 270px;
+  height: 200px;
+  object-fit: cover;
+  transition: all 1s ease-in-out;
+  border-radius: 20px;
+}
+.movie-list-item-title {
+  background: #333;
+  padding: 0 10px;
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+.movie-list-item-desc {
+  background: #333;
+  padding: 10px;
+  font-size: 14px;
+  width: 230px;
+  position: absolute;
+  top: 30%;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+.movie-list-item-button {
+ padding: 10px;
+ background: #4dbf00;
+ color: white;
+ border-radius: 10px;
+ outline: none;
+ border: none;
+ cursor: pointer;
+ position: absolute;
+ bottom: 10px;
+ left: 50px;
+ opacity: 0;
+ transition: 1s all ease-in-out;
+}
+.arrow {
+  font-size: 120px;
+  position: absolute;
+  top: 90px;
+  right: 0;
+  color: lightgray;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.container.active {
+  background: white;
+}
+.movie-list-title.active{
+  color: black;
+}
+
+.navbar-container.active {
+   background: white;
+  color: black;
+}
+.sidebar.active {
+  background: white;
+}
+.left-menu-icon.active {
+  color: black;
+}
+.toggle.active {
+  background: black;
+}
+.toggle-ball.active {
+  background: white;
+  transform: translateX(-20px);
+
+}
+
+@media only screen and (max-width: 940px) {
+  .menu-container {
+    display: none;
+  }
+}
